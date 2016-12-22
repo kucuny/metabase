@@ -7,6 +7,9 @@ ENV LEIN_ROOT 1
 ENV FC_LANG en-US
 ENV LC_CTYPE en_US.UTF-8
 
+ENV TZ=Asia/Seoul
+RUN ln -snf /usr/share/zoneinfo/$TZ /etc/localtime && echo $TZ > /etc/timezone
+
 # install core build tools
 RUN apk add --update nodejs git wget bash python make g++ java-cacerts ttf-dejavu fontconfig && \
     npm install -g yarn && \

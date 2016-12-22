@@ -15,11 +15,11 @@
 
 (def ^:private ^:const max-results-bare-rows
   "Maximum number of rows to return specifically on :rows type queries via the API."
-  2000)
+  10000)
 
 (def ^:private ^:const max-results
   "General maximum number of rows to return from an API query."
-  10000)
+  3000000)
 
 (def ^:const query-constraints
   "Default map of constraints that we apply on dataset queries executed by the api."
